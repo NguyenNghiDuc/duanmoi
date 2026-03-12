@@ -1,0 +1,100 @@
+/* background toàn web */
+
+body{
+background: #f5f7fb;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* navbar */
+
+.navbar{
+box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+
+/* card sản phẩm */
+
+.card{
+border: none;
+border-radius: 12px;
+transition: 0.3s;
+overflow: hidden;
+}
+
+.card:hover{
+transform: translateY(-5px);
+box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+
+/* ảnh sản phẩm */
+
+.card img{
+height: 220px;
+object-fit: cover;
+}
+
+
+/* nút */
+
+.btn{
+border-radius: 8px;
+}
+
+
+/* chatbot */
+
+#chatbot{
+
+z-index: 1000;
+
+}
+
+#chatbox{
+
+background: #f8f9fa;
+border-radius: 8px;
+padding: 8px;
+
+}
+
+#chatbox p{
+margin: 4px;
+font-size: 14px;
+}
+
+
+/* form login register */
+
+.card-body input{
+
+border-radius: 6px;
+
+}
+
+
+/* bảng cart */
+
+table{
+background: white;
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+
+/* title */
+
+h2{
+font-weight: bold;
+margin-bottom: 20px;
+}
+
+
+/* admin */
+
+table th{
+background: #343a40;
+color: white;
+}
