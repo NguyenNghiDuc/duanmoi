@@ -1,41 +1,51 @@
 package com.example.foodweb.model;
 
 import jakarta.persistence.*;
+import java.util.List;
 
 @Entity
-public class CartItem {
+@Table(name = "orders")
+public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long productId;
+    private String username;
 
-    private int quantity;
+    private double total;
 
-    public CartItem(){}
+    @OneToMany
+    private List<CartItem> items;
 
-    public Long getId(){
+    public Order() {
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(Long id){
-        this.id = id;
+    public String getUsername() {
+        return username;
     }
 
-    public Long getProductId(){
-        return productId;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public void setProductId(Long productId){
-        this.productId = productId;
+    public double getTotal() {
+        return total;
     }
 
-    public int getQuantity(){
-        return quantity;
+    public void setTotal(double total) {
+        this.total = total;
     }
 
-    public void setQuantity(int quantity){
-        this.quantity = quantity;
+    public List<CartItem> getItems() {
+        return items;
+    }
+
+    public void setItems(List<CartItem> items) {
+        this.items = items;
     }
 }
