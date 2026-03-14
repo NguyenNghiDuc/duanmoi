@@ -14,6 +14,9 @@ public class AuthController {
     @Autowired
     UserService userService;
 
+    @Autowired
+    private org.springframework.security.crypto.password.PasswordEncoder passwordEncoder;
+
     @GetMapping("/login")
     public String loginPage() {
 
@@ -31,6 +34,10 @@ public class AuthController {
     @PostMapping("/register")
     public String registerUser(User user) {
 
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        if (user.getRole() == null || user.getRole().isBlank()) {
+            user.setRole("USER");
+        }
         userService.saveUser(user);
 
         return "redirect:/login";

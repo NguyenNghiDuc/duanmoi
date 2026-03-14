@@ -39,6 +39,12 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 <artifactId>spring-boot-starter-thymeleaf</artifactId>
 </dependency>
 
+<!-- Thymeleaf Spring Security extras -->
+<dependency>
+    <groupId>org.thymeleaf.extras</groupId>
+    <artifactId>thymeleaf-extras-springsecurity6</artifactId>
+</dependency>
+
 <!-- Spring Data JPA -->
 <dependency>
 <groupId>org.springframework.boot</groupId>

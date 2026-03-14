@@ -12,7 +12,9 @@
 
 <body>
 
-<div class="container mt-4">
+<div th:replace="fragments/navbar :: navbar"></div>
+
+<div class="container" style="margin-top:100px;">
 
 <h2>Admin Product Manager</h2>
 
@@ -29,6 +31,7 @@ Add Product
 <th>ID</th>
 <th>Name</th>
 <th>Price</th>
+<th>Hành động</th>
 
 </tr>
 
@@ -37,12 +40,17 @@ Add Product
 <td th:text="${p.id}"></td>
 <td th:text="${p.name}"></td>
 <td th:text="${p.price}"></td>
+<td>
+    <a th:href="@{'/product/edit/' + ${p.id}}" class="btn btn-sm btn-primary me-1">Sửa</a>
+    <a th:href="@{'/product/delete/' + ${p.id}}" class="btn btn-sm btn-danger" onclick="return confirm('Bạn có chắc muốn xóa?')">Xóa</a>
+</td>
 
 </tr>
 
 </table>
 
 </div>
+<div th:replace="fragments/footer :: footer"></div>
 
 </body>
 

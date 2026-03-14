@@ -15,7 +15,10 @@ public class Order {
 
     private double total;
 
-    @OneToMany
+    private String status = "PENDING";
+
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "order_id")
     private List<CartItem> items;
 
     public Order() {
@@ -39,6 +42,14 @@ public class Order {
 
     public void setTotal(double total) {
         this.total = total;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public List<CartItem> getItems() {

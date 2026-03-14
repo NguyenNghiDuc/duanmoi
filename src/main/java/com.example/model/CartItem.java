@@ -9,6 +9,8 @@ public class CartItem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String username;
+
     private Long productId;
 
     private int quantity;
@@ -21,6 +23,14 @@ public class CartItem {
 
     public void setId(Long id){
         this.id = id;
+    }
+
+    public String getUsername(){
+        return username;
+    }
+
+    public void setUsername(String username){
+        this.username = username;
     }
 
     public Long getProductId(){

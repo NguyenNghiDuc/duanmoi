@@ -1,100 +1,121 @@
 /* background toàn web */
-
 body{
-background: #f5f7fb;
-font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(130deg, #eef2ff 0%, #f5f7fb 100%);
+    font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    min-height: 100vh;
 }
 
+.container {
+    margin-top: 90px;
+    margin-bottom: 40px;
+}
 
 /* navbar */
-
-.navbar{
-box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+.navbar {
+    background: #ffffffcc;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #e8ebf4;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
-
+.navbar-brand {
+    font-weight: 700;
+    color: #2f3d99 !important;
+}
+.navbar-nav .nav-link {
+    color: #4e5e89 !important;
+    font-weight: 500;
+}
+.navbar-nav .nav-link:hover {
+    color: #1d2a6f !important;
+}
 
 /* card sản phẩm */
-
-.card{
-border: none;
-border-radius: 12px;
-transition: 0.3s;
-overflow: hidden;
+.card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(47,61,153,0.12);
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(47,61,153,0.2);
 }
 
-.card:hover{
-transform: translateY(-5px);
-box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+.card img {
+    height: 220px;
+    object-fit: cover;
 }
 
-
-/* ảnh sản phẩm */
-
-.card img{
-height: 220px;
-object-fit: cover;
+.card-title {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
 }
-
+.card-text {
+    color: #4f5f83;
+}
 
 /* nút */
-
-.btn{
-border-radius: 8px;
+.btn, .btn:focus {
+    border-radius: 8px;
+    font-weight: 600;
+}
+.btn-success {
+    background: #2f3d99;
+    border: 0;
+}
+.btn-success:hover {
+    background: #22306e;
 }
 
-
-/* chatbot */
-
-#chatbot{
-
-z-index: 1000;
-
+/* thẻ tổng */
+.cart-card {
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    background: #fff;
+    padding: 20px;
 }
-
-#chatbox{
-
-background: #f8f9fa;
-border-radius: 8px;
-padding: 8px;
-
-}
-
-#chatbox p{
-margin: 4px;
-font-size: 14px;
-}
-
-
-/* form login register */
-
-.card-body input{
-
-border-radius: 6px;
-
-}
-
 
 /* bảng cart */
-
-table{
-background: white;
-border-radius: 10px;
-overflow: hidden;
-box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+table {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+table th, table td {
+    vertical-align: middle;
 }
 
-
-/* title */
-
-h2{
-font-weight: bold;
-margin-bottom: 20px;
+table th {
+    background: #1f2860;
+    color: #fff;
+    font-weight: 600;
 }
 
-
-/* admin */
-
-table th{
-background: #343a40;
-color: white;
+table tbody tr:hover {
+    background: #f7f8ff;
 }
+
+/* form login register */
+.card-body input {
+    border-radius: 10px;
+    border-color: #d9ddee;
+}
+.card-body .btn {
+    box-shadow: 0 8px 20px rgba(47,61,153,0.2);
+}
+
+/* footer */
+.footer {
+    margin-top: 40px;
+    padding: 15px 0;
+    background: #1f2860;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+h2 { font-weight: 800; margin-bottom: 20px; }

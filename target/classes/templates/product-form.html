@@ -18,11 +18,13 @@
 
 <form action="/product/save" method="post">
 
-<input name="name" class="form-control mt-2" placeholder="Product name">
+<input type="hidden" name="id" th:value="${product.id}" />
 
-<input name="price" class="form-control mt-2" placeholder="Price">
+<input name="name" th:value="${product.name}" class="form-control mt-2" placeholder="Product name" required>
 
-<input name="image" class="form-control mt-2" placeholder="Image URL">
+<input name="price" th:value="${product.price}" class="form-control mt-2" placeholder="Price" required>
+
+<input name="image" th:value="${product.image}" class="form-control mt-2" placeholder="Image URL">
 
 <button class="btn btn-success mt-3">
 
