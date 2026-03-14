@@ -16,6 +16,7 @@
             <th>ID</th>
             <th>Username</th>
             <th>Tổng tiền</th>
+            <th>Phương thức</th>
             <th>Số mặt hàng</th>
             <th>Chi tiết</th>
         </tr>
@@ -25,6 +26,7 @@
             <td th:text="${o.id}"></td>
             <td th:text="${o.username}"></td>
             <td th:text="${o.total} + ' VND'"></td>
+            <td th:text="${o.paymentMethod}"></td>
             <td th:text="${o.items.size()}"></td>
             <td>
                 <span class="badge" th:classappend="${o.status == 'PAID'} ? ' bg-success' : ${o.status == 'SHIPPED'} ? ' bg-info' : ' bg-warning'" th:text="${o.status}"></span>

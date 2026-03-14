@@ -207,6 +207,8 @@ public class CartController {
         Order order = new Order();
         order.setUsername(username);
         order.setTotal(total);
+        order.setStatus("PAID");
+        order.setPaymentMethod(paymentMethod);
 
         List<CartItem> orderItems = new ArrayList<>();
         for (CartItem item : cart) {

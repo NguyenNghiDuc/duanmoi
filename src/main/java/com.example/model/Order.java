@@ -17,6 +17,8 @@ public class Order {
 
     private String status = "PENDING";
 
+    private String paymentMethod;
+
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "order_id")
     private List<CartItem> items;
@@ -50,6 +52,14 @@ public class Order {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getPaymentMethod() {
+        return paymentMethod;
+    }
+
+    public void setPaymentMethod(String paymentMethod) {
+        this.paymentMethod = paymentMethod;
     }
 
     public List<CartItem> getItems() {

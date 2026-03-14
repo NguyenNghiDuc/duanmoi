@@ -14,6 +14,7 @@
         <tr>
             <th>ID</th>
             <th>Tổng tiền</th>
+            <th>Thanh toán</th>
             <th>Trạng thái</th>
             <th>Danh sách sản phẩm</th>
         </tr>
@@ -22,6 +23,7 @@
         <tr th:each="o : ${orders}">
             <td th:text="${o.id}"></td>
             <td th:text="${o.total} + ' VND'"></td>
+            <td th:text="${o.paymentMethod}"></td>
             <td>
                 <span class="badge" th:classappend="${o.status == 'PAID'} ? ' bg-success' : ${o.status == 'SHIPPED'} ? ' bg-info' : ' bg-warning'" th:text="${o.status}"></span>
             </td>
