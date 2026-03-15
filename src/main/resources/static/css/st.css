@@ -1,121 +1,291 @@
-/* background toàn web */
-body{
-    background: linear-gradient(130deg, #eef2ff 0%, #f5f7fb 100%);
-    font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
-    min-height: 100vh;
+/* ===================== */
+/* HEADER & TOP BAR */
+/* ===================== */
+
+.header-top-bar{
+    background:#b71c1c;
+    color:#fff;
+    box-shadow:0 2px 8px rgba(183,28,28,0.08);
 }
 
-.container {
-    margin-top: 90px;
-    margin-bottom: 40px;
+.logo-img{
+    height:48px;
+    width:48px;
+    object-fit:contain;
+    border-radius:50%;
+    background:#fff;
+    border:2px solid #b71c1c;
+    margin-right:10px;
 }
 
-/* navbar */
-.navbar {
-    background: #ffffffcc;
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid #e8ebf4;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-}
-.navbar-brand {
-    font-weight: 700;
-    color: #2f3d99 !important;
-}
-.navbar-nav .nav-link {
-    color: #4e5e89 !important;
-    font-weight: 500;
-}
-.navbar-nav .nav-link:hover {
-    color: #1d2a6f !important;
+.brand-title{
+    font-size:1.6rem;
+    font-weight:800;
+    letter-spacing:1px;
+    color:#b71c1c;
+    background:#fff;
+    padding:2px 12px;
+    border-radius:8px;
 }
 
-/* card sản phẩm */
-.card {
-    border: none;
-    border-radius: 15px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(47,61,153,0.12);
-}
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 14px 30px rgba(47,61,153,0.2);
+.brand-slogan{
+    font-size:1rem;
+    color:#fff;
+    font-style:italic;
 }
 
-.card img {
-    height: 220px;
-    object-fit: cover;
+.hotline{
+    font-size:1.1rem;
+    background:#d32f2f;
+    padding:4px 14px;
+    border-radius:20px;
+    font-weight:600;
 }
 
-.card-title {
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-}
-.card-text {
-    color: #4f5f83;
-}
-
-/* nút */
-.btn, .btn:focus {
-    border-radius: 8px;
-    font-weight: 600;
-}
-.btn-success {
-    background: #2f3d99;
-    border: 0;
-}
-.btn-success:hover {
-    background: #22306e;
+.cart-link{
+    color:#fff;
+    font-weight:600;
+    position:relative;
+    text-decoration:none;
 }
 
-/* thẻ tổng */
-.cart-card {
-    border-radius: 14px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-    background: #fff;
-    padding: 20px;
+.cart-count{
+    background:#fff;
+    color:#b71c1c;
+    border-radius:50%;
+    padding:2px 7px;
+    font-size:0.9em;
+    position:absolute;
+    top:-8px;
+    right:-18px;
+    font-weight:bold;
 }
 
-/* bảng cart */
-table {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-}
-table th, table td {
-    vertical-align: middle;
+.search-form input{
+    border-radius:20px;
+    border:1px solid #d32f2f;
+    padding-left:16px;
 }
 
-table th {
-    background: #1f2860;
-    color: #fff;
-    font-weight: 600;
+.search-form button{
+    border-radius:20px;
+    background:#b71c1c;
+    border:none;
+    color:#fff;
 }
 
-table tbody tr:hover {
-    background: #f7f8ff;
+
+/* ===================== */
+/* SIDEBAR MENU */
+/* ===================== */
+
+.sidebar-menu{
+    min-width:260px;
+    background:#fff;
+    border-radius:18px;
+    box-shadow:0 4px 18px rgba(183,28,28,0.08);
+    margin-top:10px;
 }
 
-/* form login register */
-.card-body input {
-    border-radius: 10px;
-    border-color: #d9ddee;
-}
-.card-body .btn {
-    box-shadow: 0 8px 20px rgba(47,61,153,0.2);
+.sidebar-menu ul{
+    padding-left:0;
 }
 
-/* footer */
-.footer {
-    margin-top: 40px;
-    padding: 15px 0;
-    background: #1f2860;
-    color: white;
-    text-align: center;
-    font-size: 14px;
-    border-top: 1px solid rgba(255,255,255,0.08);
+.sidebar-menu li{
+    margin-bottom:12px;
+    font-size:1.08rem;
+    font-weight:500;
+    list-style:none;
 }
 
-h2 { font-weight: 800; margin-bottom: 20px; }
+.sidebar-menu a{
+    color:#b71c1c;
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    padding:8px 10px;
+    border-radius:8px;
+    transition:0.2s;
+}
+
+.sidebar-menu a:hover{
+    background:#ffeaea;
+    color:#d32f2f;
+}
+
+.sidebar-menu i{
+    font-size:1.2em;
+    margin-right:10px;
+}
+
+
+/* ===================== */
+/* MAIN BANNER */
+/* ===================== */
+
+.main-banner{
+    background:linear-gradient(120deg,#fff0f0 0%,#ffeaea 100%);
+    border-radius:24px;
+    box-shadow:0 8px 32px rgba(183,28,28,0.10);
+    margin-top:30px;
+    margin-bottom:40px;
+}
+
+.banner-title{
+    color:#b71c1c;
+    font-size:2.5rem;
+    font-weight:800;
+    margin-bottom:10px;
+}
+
+.banner-desc{
+    color:#4e5e89;
+    font-size:1.2rem;
+    margin-bottom:18px;
+}
+
+.banner-img img{
+    max-width:420px;
+    border-radius:24px;
+    box-shadow:0 8px 32px rgba(183,28,28,0.10);
+}
+
+
+/* ===================== */
+/* BUTTONS */
+/* ===================== */
+
+.btn,
+.btn:focus{
+    border-radius:8px;
+    font-weight:600;
+}
+
+.btn-danger{
+    background:#b71c1c;
+    border:none;
+    border-radius:24px;
+    padding:10px 32px;
+}
+
+.btn-danger:hover{
+    background:#d32f2f;
+}
+
+.btn-success{
+    background:#2f3d99;
+    border:0;
+}
+
+.btn-success:hover{
+    background:#22306e;
+}
+
+
+/* ===================== */
+/* CART CARD */
+/* ===================== */
+
+.cart-card{
+    border-radius:14px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.12);
+    background:#fff;
+    padding:20px;
+}
+
+
+/* ===================== */
+/* TABLE */
+/* ===================== */
+
+table{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+table th,
+table td{
+    vertical-align:middle;
+}
+
+table th{
+    background:#1f2860;
+    color:#fff;
+    font-weight:600;
+}
+
+table tbody tr:hover{
+    background:#f7f8ff;
+}
+
+
+/* ===================== */
+/* FORM */
+/* ===================== */
+
+.card-body input{
+    border-radius:10px;
+    border-color:#d9ddee;
+}
+
+.card-body .btn{
+    box-shadow:0 8px 20px rgba(47,61,153,0.2);
+}
+
+
+/* ===================== */
+/* FOOTER */
+/* ===================== */
+
+.footer{
+    margin-top:40px;
+    padding:15px 0;
+    background:#1f2860;
+    color:white;
+    text-align:center;
+    font-size:14px;
+}
+
+
+/* ===================== */
+/* TITLES */
+/* ===================== */
+
+h2{
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+
+/* ===================== */
+/* RESPONSIVE */
+/* ===================== */
+
+@media (max-width:991px){
+
+    .container.d-flex{
+        flex-direction:column;
+    }
+
+    .sidebar-menu{
+        min-width:100%;
+        margin-bottom:20px;
+    }
+
+}
+
+@media (max-width:767px){
+
+    .main-banner .container{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .banner-img img{
+        max-width:90vw;
+        margin-top:18px;
+    }
+
+}
