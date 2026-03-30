@@ -35,6 +35,11 @@ products.add(new Product(14L,"Coca Cola",20000,"coke.jpg"));
 products.add(new Product(15L,"Pepsi",20000,"pepsi.jpg"));
 
 model.addAttribute("products",products);
+model.addAttribute("currentPage", 0);
+model.addAttribute("totalPages", 1);
+model.addAttribute("q", "");
+model.addAttribute("minPrice", 0);
+model.addAttribute("maxPrice", 0);
 
 return "index";
 }

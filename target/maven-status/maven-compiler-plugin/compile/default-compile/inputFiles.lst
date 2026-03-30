@@ -5,7 +5,6 @@
 /workspaces/duanmoi/src/main/java/com.example/model/Product.java
 /workspaces/duanmoi/src/main/java/com.example/controller/CartController.java
 /workspaces/duanmoi/src/main/java/com.example/service/UserService.java
-/workspaces/duanmoi/src/main/java/com/example/foodweb/config/WebConfig.java
 /workspaces/duanmoi/src/main/java/com.example/repository/UserRepository.java
 /workspaces/duanmoi/src/main/java/com.example/config/SecurityConfig.java
 /workspaces/duanmoi/src/main/java/com.example/controller/ProductController.java

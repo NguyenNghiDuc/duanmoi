@@ -8,8 +8,10 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
 
-<link th:href="@{/css/st.css}" rel="stylesheet">
 
+<link href="..//static/css/st.css" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="/js/cart.js"></script>
 
 </head>
@@ -23,66 +25,66 @@
 
 <form class="row g-3 mb-4" method="get" action="/products">
     <div class="col-md-4">
-        <input type="text" name="q" class="form-control" placeholder="Tìm kiếm sản phẩm" th:value="${q}">
-    </div>
-    <div class="col-md-3">
-        <input type="number" name="minPrice" class="form-control" placeholder="Giá tối thiểu" min="0" step="1000" th:value="${minPrice}">
-    </div>
-    <div class="col-md-3">
-        <input type="number" name="maxPrice" class="form-control" placeholder="Giá tối đa" min="0" step="1000" th:value="${maxPrice}">
-    </div>
-    <div class="col-md-2 d-grid">
-        <button type="submit" class="btn btn-outline-primary">Lọc</button>
-    </div>
-</form>
-
-<div class="row">
-
-<div class="col-md-4 mb-4" th:each="p : ${products}">
-
-<div class="card">
-
-<img class="card-img-top"
-th:src="@{'/images/' + ${p.image}}"
-style="height:200px;object-fit:cover">
-
-<div class="card-body text-center">
-
-<h5 th:text="${p.name}"></h5>
-
-<p class="text-danger" th:text="${p.price} + ' VND'"></p>
-
-<button class="btn btn-success"
-th:onclick="'addToCart(' + ${p.id} + ')'">
-Thêm vào giỏ hàng
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<nav aria-label="Page navigation">
-    <ul class="pagination justify-content-center">
-        <li class="page-item" th:classappend="${currentPage == 0}? 'disabled'">
-            <a class="page-link" th:href="@{/products(q=${q},minPrice=${minPrice},maxPrice=${maxPrice},page=${currentPage - 1},size=8)}">Previous</a>
-        </li>
-        <li class="page-item" th:each="i : ${#numbers.sequence(0, totalPages-1)}" th:classappend="${i == currentPage}? 'active'">
-            <a class="page-link" th:href="@{/products(q=${q},minPrice=${minPrice},maxPrice=${maxPrice},page=${i},size=8)}" th:text="${i + 1}"></a>
-        </li>
-        <li class="page-item" th:classappend="${currentPage >= totalPages-1}? 'disabled'">
-            <a class="page-link" th:href="@{/products(q=${q},minPrice=${minPrice},maxPrice=${maxPrice},page=${currentPage + 1},size=8)}">Next</a>
-        </li>
-    </ul>
-</nav>
-
-<a href="/cart" class="btn btn-warning">🛒 Giỏ hàng</a>
-
-</div>
-<div th:replace="fragments/footer :: footer"></div>
-</body>
-
-</html>
+            <input type="text" name="q" class="form-control" placeholder="Tìm kiếm sản phẩm" th:value="${q}">
+                </div>
+                    <div class="col-md-3">
+                            <input type="number" name="minPrice" class="form-control" placeholder="Giá tối thiểu" min="0" step="1000" th:value="${minPrice}">
+                                </div>
+                                    <div class="col-md-3">
+                                            <input type="number" name="maxPrice" class="form-control" placeholder="Giá tối đa" min="0" step="1000" th:value="${maxPrice}">
+                                                </div>
+                                                    <div class="col-md-2 d-grid">
+                                                            <button type="submit" class="btn btn-outline-primary">Lọc</button>
+                                                                </div>
+                                                                </form>
+                                                                
+                                                                <div class="row">
+                                                                
+                                                                <div class="col-md-4 mb-4" th:each="p : ${products}">
+                                                                
+                                                                <div class="card">
+                                                                
+                                                                <img class="card-img-top"
+                                                                th:src="@{'/images/' + ${p.image}}"
+                                                                style="height:200px;object-fit:cover">
+                                                                
+                                                                <div class="card-body text-center">
+                                                                
+                                                                <h5 th:text="${p.name}"></h5>
+                                                                
+                                                                <p class="text-danger" th:text="${p.price} + ' VND'"></p>
+                                                                
+                                                                <button class="btn btn-success"
+                                                                th:onclick="'addToCart(' + ${p.id} + ')'">
+                                                                Thêm vào giỏ hàng
+                                                                </button>
+                                                                
+                                                                </div>
+                                                                
+                                                                </div>
+                                                                
+                                                                </div>
+                                                                
+                                                                </div>
+                                                                
+                                                                <nav aria-label="Page navigation">
+                                                                    <ul class="pagination justify-content-center">
+                                                                            <li class="page-item" th:classappend="${currentPage == 0}? 'disabled'">
+                                                                                        <a class="page-link" th:href="@{/products(q=${q},minPrice=${minPrice},maxPrice=${maxPrice},page=${currentPage - 1},size=8)}">Previous</a>
+                                                                                                </li>
+                                                                                                        <li class="page-item" th:each="i : ${#numbers.sequence(0, totalPages-1)}" th:classappend="${i == currentPage}? 'active'">
+                                                                                                                    <a class="page-link" th:href="@{/products(q=${q},minPrice=${minPrice},maxPrice=${maxPrice},page=${i},size=8)}" th:text="${i + 1}"></a>
+                                                                                                                            </li>
+                                                                                                                                    <li class="page-item" th:classappend="${currentPage >= totalPages-1}? 'disabled'">
+                                                                                                                                                <a class="page-link" th:href="@{/products(q=${q},minPrice=${minPrice},maxPrice=${maxPrice},page=${currentPage + 1},size=8)}">Next</a>
+                                                                                                                                                        </li>
+                                                                                                                                                            </ul>
+                                                                                                                                                            </nav>
+                                                                                                                                                            
+                                                                                                                                                            <a href="/cart" class="btn btn-warning">🛒 Giỏ hàng</a>
+                                                                                                                                                            
+                                                                                                                                                            </div>
+                                                                                                                                                            <div th:replace="fragments/footer :: footer"></div>
+                                                                                                                                                            </body>
+                                                                                                                                                            
+                                                                                                                                                            </html>>

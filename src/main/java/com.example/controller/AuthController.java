@@ -1,46 +1,34 @@
 package com.example.foodweb.controller;
 
 import com.example.foodweb.model.User;
-import com.example.foodweb.service.UserService;
-
+import com.example.foodweb.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class AuthController {
 
-    @Autowired
-    UserService userService;
+@Autowired
+private UserRepository userRepository;
 
-    @Autowired
-    private org.springframework.security.crypto.password.PasswordEncoder passwordEncoder;
+/* trang login */
+@GetMapping("/login")
+public String login(){
+return "login";
+}
 
-    @GetMapping("/login")
-    public String loginPage() {
+/* trang register */
+@GetMapping("/register")
+public String register(){
+return "register";
+}
 
-        return "login";
-    }
-
-    @GetMapping("/register")
-    public String registerPage(Model model) {
-
-        model.addAttribute("user", new User());
-
-        return "register";
-    }
-
-    @PostMapping("/register")
-    public String registerUser(User user) {
-
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
-        if (user.getRole() == null || user.getRole().isBlank()) {
-            user.setRole("USER");
-        }
-        userService.saveUser(user);
-
-        return "redirect:/login";
-    }
+/* xử lý đăng ký */
+@PostMapping("/register")
+public String registerUser(User user){
+userRepository.save(user);
+return "redirect:/login";
+}
 
 }

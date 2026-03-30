@@ -10,7 +10,6 @@ com/example/foodweb/controller/AuthController.class
 com/example/foodweb/repository/UserRepository.class
 com/example/foodweb/controller/CartController.class
 com/example/foodweb/config/SecurityConfig.class
-com/example/foodweb/config/WebConfig.class
 com/example/foodweb/repository/ProductRepository.class
 com/example/foodweb/repository/OrderRepository.class
 com/example/foodweb/model/CartItem.class
